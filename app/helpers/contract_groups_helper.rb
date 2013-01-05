@@ -1,0 +1,2 @@
+module ContractGroupsHelper
+end

@@ -1,0 +1,24 @@
+<h1>分组管理</h1>
+
+<table>
+  <tr>
+    <th>分组</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @contract_groups.each do |contract_group| %>
+  <tr>
+    <td><%= contract_group.group_name %></td>
+    <td><%= contract_group.file %></td>
+    <td><%= link_to 'Show', contract_group %></td>
+    <td><%= link_to 'Edit', edit_contract_group_path(contract_group) %></td>
+    <td><%= link_to 'Destroy', contract_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '创建分组', new_contract_group_path %>
